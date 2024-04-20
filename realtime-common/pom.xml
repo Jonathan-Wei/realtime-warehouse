@@ -29,7 +29,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.flink</groupId>
+            <groupId>com.ververica</groupId>
             <artifactId>flink-connector-mysql-cdc</artifactId>
         </dependency>
 

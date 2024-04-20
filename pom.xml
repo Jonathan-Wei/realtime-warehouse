@@ -21,7 +21,7 @@
     <flink.version>1.17.1</flink.version>
     <scala.version>2.12</scala.version>
     <hadoop.version>3.3.4</hadoop.version>
-    <flink-cdc.version>2.4.0</flink-cdc.version>
+    <flink-cdc.version>3.0.0</flink-cdc.version>
     <fastjson.version>1.2.83</fastjson.version>
     <hbase.version>2.4.11</hbase.version>
   </properties>
@@ -122,6 +122,13 @@
       <artifactId>flink-connector-files</artifactId>
       <version>${flink.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.13.0</version>
+      <type>maven-plugin</type>
+    </dependency>
   </dependencies>
 
   <dependencyManagement>
@@ -139,7 +146,7 @@
         </dependency>
 
         <dependency>
-          <groupId>org.apache.flink</groupId>
+          <groupId>com.ververica</groupId>
           <artifactId>flink-connector-mysql-cdc</artifactId>
           <version>${flink-cdc.version}</version>
         </dependency>
@@ -206,7 +213,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>3.13.0</version>
         <executions>
           <execution>
             <phase>package</phase>
